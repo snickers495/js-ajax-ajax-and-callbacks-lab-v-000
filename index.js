@@ -33,6 +33,6 @@ function showCommits(obj){
   const username = data.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   $.get(url, function(response){
-
+    $("#details").html()
   })
 }

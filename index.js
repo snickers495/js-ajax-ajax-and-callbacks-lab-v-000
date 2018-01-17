@@ -36,9 +36,9 @@ function showCommits(obj){
     const commits = '<ul>' + response.items.map(r => {
      return (`<li>
               <p>SHA: ${r.sha}</p>
-              <p>Author: ${r.author.name}</p>
+              <p>Author: ${r.commit.author.name}</p>
               <p>Author Login: ${r.author.login}</p>
-              <p><img src="${r.owner.avatar_url}" alt="icon"></p>
+              <p><img src="${r.author.avatar_url}" alt="icon"></p>
             </li>`
             )
     }).join('') + "</ul>"

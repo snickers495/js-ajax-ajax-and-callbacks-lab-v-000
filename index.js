@@ -13,7 +13,7 @@ function displayError(){
   $("#errors").html("I'm sorry, there's been an error. Please try again.")
 }
 function showRepositories(response){
-  const repoList = '<ul>' + response.map(r => {
+  const repoList = '<ul>' + response.items.map(r => {
    return (`
           <li>
             <h2><a href="${r.html_url}">${r.name}</a></h2>

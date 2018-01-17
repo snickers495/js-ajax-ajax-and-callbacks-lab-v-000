@@ -25,5 +25,5 @@ function showRepositories(){
           </li>`
           )
   }).join('') + "</ul>"
-  document.getElementById("repositories").innerHTML = repoList
+  document.getElementById("results").innerHTML = repoList
 }

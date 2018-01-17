@@ -35,7 +35,6 @@ function showCommits(obj){
   $.get(url, function(response){
     const commits = '<ul>' + response.items.map(r => {
      return (`<li>
-              <h2><a href="${r.html_url}">${r.name}</a></h2>
               <p>SHA: ${r.sha}</p>
               <p>Author: ${r.author.name}</p>
               <p><img src="${r.owner.avatar_url}" alt="icon"></p>

@@ -42,6 +42,6 @@ function showCommits(obj){
             </li>`
             )
     }).join('') + "</ul>"
-    $("#details").html()
+    $("#details").html(commits)
   })
 }

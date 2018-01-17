@@ -43,5 +43,7 @@ function showCommits(obj){
             )
     }).join('') + "</ul>"
     $("#details").html(commits)
+  }).fail(function(error){
+    displayError();
   })
 }

@@ -28,8 +28,7 @@ function showRepositories(response){
   document.getElementById("results").innerHTML = repoList
 }
 function getCommits(obj){
-  const data = obj.dataset;
-  const name = obj.repository;
+  const name = obj.owner.login;
   const username = obj.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   const req = new XMLHttpRequest()

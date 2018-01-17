@@ -30,7 +30,7 @@ function showRepositories(response){
 function showCommits(obj){
   const data = obj.dataset;
   const name = data.repository;
-  const username = data.username;
+  const username = data.owner;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   $.get(url, function(response){
     const commits = '<ul>' + response.map(r => {

@@ -29,7 +29,7 @@ function showRepositories(response){
 }
 function showCommits(obj){
   const data = obj.dataset;
-  const name = data.repository;
+  const name = obj.repository;
   const username = data.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   const req = new XMLHttpRequest()

@@ -26,3 +26,4 @@ function showRepositories(response){
   }).join('') + "</ul>"
   document.getElementById("results").innerHTML = repoList
 }
+function showCommits(){}

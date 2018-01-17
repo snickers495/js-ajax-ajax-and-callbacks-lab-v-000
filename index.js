@@ -27,7 +27,7 @@ function showRepositories(response){
   }).join('') + "</ul>"
   document.getElementById("results").innerHTML = repoList
 }
-function getCommits(obj){
+function showCommits(obj){
   const data = obj.dataset;
   const name = data.repository;
   const username = data.username;

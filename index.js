@@ -33,7 +33,7 @@ function showCommits(obj){
   const username = data.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   $.get(url, function(response){
-    const commits = '<ul>' + response.items.map(r => {
+    const commits = '<ul>' + response.map(r => {
      return (`<li>
               <p>SHA: ${r.sha}</p>
               <p>Author: ${r.commit.author.name}</p>

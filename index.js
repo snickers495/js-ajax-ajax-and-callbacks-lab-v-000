@@ -33,6 +33,17 @@ function showCommits(obj){
   const username = data.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
   $.get(url, function(response){
+    const commits = '<ul>' + response.items.map(r => {
+     return (`<li>
+              <h2><a href="${r.html_url}">${r.name}</a></h2>
+              <p>Description: ${r.description}</p>
+              <p>Owner: ${r.owner.login}</p>
+              <p><img src="${r.owner.avatar_url}" alt="icon"></p>
+              <h2><a href="${r.html_url}">${r.owner.login} Page</a></h2>
+              <p><a href="#" onClick="showCommits(this); return false;">Show Commits</a>
+            </li>`
+            )
+    }).join('') + "</ul>"
     $("#details").html()
   })
 }

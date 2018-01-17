@@ -12,7 +12,7 @@ function searchRepositories(){
 function displayError(){
   $("#errors").html("I'm sorry, there's been an error. Please try again.")
 }
-function showRepositories(){
+function showRepositories(response){
   const respositories = JSON.parse(this.responseText)
   const repoList = '<ul>' + repos.map(r => {
    return (`

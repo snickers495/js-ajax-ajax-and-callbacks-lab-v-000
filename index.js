@@ -32,7 +32,9 @@ function getCommits(obj){
   const name = data.repository;
   const username = data.username;
   const url = 'https://api.github.com/repos/' + username + '/' + name + '/commits'
-  const req = new XMLHttpRequest()
+  $.get(url, function(response){
+
+  })
   req.addEventListener("load", displayCommits)
   req.open("GET", url)
   req.send()
